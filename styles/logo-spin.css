@@ -1,0 +1,21 @@
+[title="Logo"] {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  display: block;
+  animation: rotation 7s;
+  margin-bottom: 2.5rem;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  transform-origin: 50% 58.8%;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0turn);
+  }
+  25%,
+  100% {
+    transform: rotate(3turn);
+  }
+}
