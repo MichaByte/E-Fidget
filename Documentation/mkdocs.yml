@@ -1,0 +1,26 @@
+site_name: E-Fidget
+repo_url: https://github.com/2231puppy/E-Fidget
+repo_name: E-Fidget Design Source
+edit_uri: https://github.com/2231puppy/E-Fidget-Docs/edit/main/docs/
+site_description: Documentation for the E-Fidget, a haptic feedback fidget spinner
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: deep purple
+      accent: light blue
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+      primary: deep purple
+      accent: light blue
+  logo: img/logo.svg
+  favicon: img/logo.svg
+  custom_dir: overrides/
+extra_css:
+  - styles/header.css
+  - styles/logo-spin.css
