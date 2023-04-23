@@ -2,7 +2,7 @@ name: Publish docs via GitHub Pages
 on:
   push:
     branches:
-      - main
+      - trying-docs
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_DOMAIN: e-fidget.xyz
-          CONFIG_FILE: Documentation/mkdocs.yml
+          CONFIG_FILE: docs/mkdocs.yml
