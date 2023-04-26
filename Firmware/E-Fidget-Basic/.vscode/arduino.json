@@ -1,7 +1,0 @@
-{
-    "configuration": "chip=841,LTO=enable,clock=8internal5v,eesave=aenable,bod=1v8,bodact=disabled,bodpd=disabled,pinmapping=anew,wiremode=amaster,millis=enabled,neopixelport=porta",
-    "board": "ATTinyCore:avr:attinyx41",
-    "sketch": "E-Fidget-Test.ino",
-    "programmer": "arduinoasisp",
-    "port": "/dev/ttyACM1"
-}
