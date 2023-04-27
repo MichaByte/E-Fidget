@@ -22,7 +22,7 @@ unsigned long event_time = 0;
 unsigned long spin_count = 0;
 
 #define MOTOR_RUN_TIME 5000
-#define DELAY_MULTIPLIER 1000
+#define DELAY_MULTIPLIER 950
 
 //int debounce = 0;
 
@@ -55,7 +55,7 @@ void next_motor(unsigned long curtime)
     {
         // curmotor == M3_PIN
         ++spin_count;
-        if (spin_count >= 15)
+        if (spin_count >= 12)
         {
             curmotor = 0;
         }
