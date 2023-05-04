@@ -1,6 +1,10 @@
+#include <avr/sleep.h>
+#include <avr/power.h>
+
 #include "Vars.h"
 
 void setup() {
+  ADCSRA = 0;
   pinMode(M1_PIN, OUTPUT);
   pinMode(M2_PIN, OUTPUT);
   pinMode(M3_PIN, OUTPUT);
@@ -11,9 +15,13 @@ void setup() {
   digitalWrite(M1_PIN, LOW);
   digitalWrite(M2_PIN, LOW);
   digitalWrite(M3_PIN, LOW);
-
+  PCMSK0  |= bit (PCINT4);
+  GIFR   |= bit (PCIF0);
+  GIMSK  |= bit (PCIE0);
 
 }
+
+EMPTY_INTERRUPT(PCINT0_vect);
 
 int b1down = 0;
 int curmotor = 0;
@@ -25,6 +33,14 @@ unsigned long spin_count = 0;
 #define DELAY_MULTIPLIER 950
 
 //int debounce = 0;
+
+void sleep() {
+  digitalWrite(M1_PIN, LOW);
+  digitalWrite(M2_PIN, LOW);
+  digitalWrite(M3_PIN, LOW);
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  sleep_mode();
+}
 
 void restart_motors()
 {
@@ -101,5 +117,9 @@ void loop()
         restart_motors();
         b1down = 0;
     }
+    else if (curmotor == 0) {
+      sleep();
+    }
+
 }
 
