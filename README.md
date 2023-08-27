@@ -1,7 +1,9 @@
 # E-Fidget
 
-Hi there! There's lots of stuff in this repo, but I have yet to
-organize and document it. If you want to, feel free to poke around!
-Just beware - Here be dragons!
+Hi there! There's a lot of moving parts with this project right now,
+so why don't you check out [my latest blog post](https://2231puppy.tech/posts/projects/e-fidget/update-3/)
+for more info?
+
+Thanks :)
 
 \- Micha
